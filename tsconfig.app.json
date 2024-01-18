@@ -8,11 +8,11 @@
     },
     "composite": true,
     "noEmit": true,
-    "baseUrl": ".",
+    // This baseUrl + paths config enables auto absolute imports with alias!
+    "baseUrl": "./src",
     // In imports @ will be replaced with ./src
     "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["./src/components/*"]
+      "@/*": ["./*"]
     }
   }
 }

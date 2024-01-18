@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTheme } from "@/composables/useTheme"
+import { useTheme } from '@/app/lib/useTheme';
 
 const {theme, toggleTheme} = useTheme()
 </script>
@@ -12,3 +12,7 @@ const {theme, toggleTheme} = useTheme()
     <RouterView />
   </div>
 </template>
+
+<style lang="scss">
+@import '../styles/index'
+</style>
