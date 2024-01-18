@@ -1,13 +1,14 @@
 <script setup lang="ts">
+import { useTheme } from "@/composables/useTheme"
+
+const {theme, toggleTheme} = useTheme()
 </script>
 
 <template>
-  <div>
+  <div class="app" :class="theme">
+  <button @click="toggleTheme">toggle theme</button>
     <RouterLink to="/">To Main Page</RouterLink>
     <RouterLink to="/about">To About Page</RouterLink>
     <RouterView />
   </div>
 </template>
-
-<style scoped>
-</style>

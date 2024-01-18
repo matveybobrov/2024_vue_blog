@@ -11,7 +11,7 @@
     "baseUrl": ".",
     // In imports @ will be replaced with ./src
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["src/*"],
       "@components/*": ["./src/components/*"]
     }
   }
