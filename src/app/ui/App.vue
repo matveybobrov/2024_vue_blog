@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { useTheme } from '../providers/theme';
 
+import NavBar from '@/widgets/NavBar';
+
 const {theme, toggleTheme} = useTheme()
 </script>
 
 <template>
   <div class="app" :class="theme">
-  <button @click="toggleTheme">toggle theme</button>
-    <RouterLink to="/">To Main Page</RouterLink>
-    <RouterLink to="/about">To About Page</RouterLink>
+    <NavBar />
     <RouterView />
   </div>
+  <button @click="toggleTheme">toggle theme</button>
 </template>
 
 <style lang="scss">
