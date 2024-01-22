@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { Routes } from '@/app/providers/router';
 import AppLink from '@/shared/ui/AppLink';
-
-interface NavbarProps {
-  class?: string;
-}
-defineProps<NavbarProps>();
 </script>
 
 <template>
