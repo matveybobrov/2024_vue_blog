@@ -1,7 +1,7 @@
 <script setup lang='ts'>
+import type { RouterLinkProps } from 'vue-router'
 import { Routes } from "@/app/providers/router"
 
-import type { RouterLinkProps } from 'vue-router'
 interface ApplinkProps extends RouterLinkProps {
   to: Routes
 }

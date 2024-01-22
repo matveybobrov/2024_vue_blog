@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useTheme } from '../providers/theme';
-
 import NavBar from '@/widgets/NavBar';
 
+import { useTheme } from '../providers/theme';
 const {theme, toggleTheme} = useTheme()
 </script>
 
@@ -15,5 +14,5 @@ const {theme, toggleTheme} = useTheme()
 </template>
 
 <style lang="scss">
-@import '../styles/index'
+@import '../styles/index';
 </style>
