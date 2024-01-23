@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { Routes } from '@/app/providers/router';
 import AppLink from '@/shared/ui/AppLink';
-import ThemeSwitcher from '@/widgets/ThemeSwitcher';
 </script>
 
 <template>
   <div class="navbar">
-    <ThemeSwitcher />
     <div class="links">
       <AppLink :to="Routes.MAIN">Главная</AppLink>
       <AppLink :to="Routes.ABOUT">О сайте</AppLink>
