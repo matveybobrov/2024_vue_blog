@@ -1,3 +1,3 @@
 <template>
-  <div>Main Page</div>
+  <div>{{ t('Главная страница') }}</div>
 </template>

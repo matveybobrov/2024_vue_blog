@@ -1,12 +1,13 @@
 <script setup lang='ts'>
-import { ref } from "vue"
 import ThemeSwitcher from "@/widgets/ThemeSwitcher";
+import LangSwitcher from "@/widgets/LangSwitcher";
 </script>
 
 <template>
   <div class="sidebar">
     <div class="switchers">
       <ThemeSwitcher />
+      <LangSwitcher />
     </div>
   </div>
 </template>
@@ -28,5 +29,6 @@ import ThemeSwitcher from "@/widgets/ThemeSwitcher";
   display: flex;
   justify-content: center;
   width: 100%;
+  gap: 10px;
 }
 </style>

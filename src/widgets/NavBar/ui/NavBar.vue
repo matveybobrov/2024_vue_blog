@@ -6,8 +6,8 @@ import AppLink from '@/shared/ui/AppLink';
 <template>
   <div class="navbar">
     <div class="links">
-      <AppLink :to="Routes.MAIN">Главная</AppLink>
-      <AppLink :to="Routes.ABOUT">О сайте</AppLink>
+      <AppLink :to="Routes.MAIN">{{ t('Главная') }}</AppLink>
+      <AppLink :to="Routes.ABOUT">{{ t('О сайте') }}</AppLink>
     </div>
   </div>
 </template>
