@@ -1,12 +1,26 @@
 <script setup lang='ts'>
   import { inject } from 'vue';
   import { themeProvider } from '@/app/providers/theme';
-  const { toggleTheme } = inject(themeProvider, {})
+  import LightIcon from "@/shared/assets/icons/theme-light.svg"
+  import DarkIcon from "@/shared/assets/icons/theme-dark.svg"
+  import BaseButton, { BasebuttonTheme} from "@/shared/ui/BaseButton"
+  const { theme, toggleTheme, Theme } = inject(themeProvider, {})
 </script>
 
 <template>
-  <button @click="toggleTheme">toggle theme</button>
+  <BaseButton :theme="BasebuttonTheme.CLEAR" class="themeToggler" @click="toggleTheme">
+    <LightIcon v-if="theme === Theme?.DARK" class="icon" fill="#000"/>
+    <DarkIcon v-else class="icon" fill="#fff"/>
+  </BaseButton>
 </template>
 
 <style scoped lang='scss'>
+.themeToggler {
+  height: 20px;
+  width: 20px;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
 </style>

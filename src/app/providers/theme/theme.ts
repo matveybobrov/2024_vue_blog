@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 // Перечисление (набор именованных констант). Theme.LIGHT будет возвращать "light"
-enum Theme {
+export enum Theme {
   LIGHT = 'light',
   DARK = 'dark',
 }
