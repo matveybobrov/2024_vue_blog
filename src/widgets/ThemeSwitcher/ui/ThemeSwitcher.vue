@@ -3,12 +3,12 @@
   import { themeProvider } from '@/app/providers/theme';
   import LightIcon from "@/shared/assets/icons/theme-light.svg"
   import DarkIcon from "@/shared/assets/icons/theme-dark.svg"
-  import BaseButton, { BasebuttonTheme} from "@/shared/ui/BaseButton"
+  import BaseButton, { BaseButtonTheme} from "@/shared/ui/BaseButton"
   const { theme, toggleTheme, Theme } = inject(themeProvider, {})
 </script>
 
 <template>
-  <BaseButton :theme="BasebuttonTheme.CLEAR" class="themeToggler" @click="toggleTheme">
+  <BaseButton :theme="BaseButtonTheme.CLEAR" class="themeToggler" @click="toggleTheme">
     <LightIcon v-if="theme === Theme?.DARK" class="icon" fill="#000"/>
     <DarkIcon v-else class="icon" fill="#fff"/>
   </BaseButton>

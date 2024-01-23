@@ -1,5 +1,5 @@
 import BaseButton from './BaseButton.vue'
-export enum BasebuttonTheme {
+export enum BaseButtonTheme {
   CLEAR = 'clear',
 }
 export default BaseButton

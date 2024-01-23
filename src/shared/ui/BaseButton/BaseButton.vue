@@ -1,9 +1,9 @@
 <script setup lang='ts'>
-import type { BasebuttonTheme } from '.';
-interface BasebuttonProps {
-  theme?: BasebuttonTheme
+import type { BaseButtonTheme } from '.';
+interface BaseButtonProps {
+  theme?: BaseButtonTheme
 }
-defineProps<BasebuttonProps>()
+defineProps<BaseButtonProps>()
 </script>
 
 <template>

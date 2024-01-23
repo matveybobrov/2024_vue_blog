@@ -2,10 +2,10 @@
 import type { RouterLinkProps } from 'vue-router'
 import { Routes } from "@/app/providers/router"
 
-interface ApplinkProps extends RouterLinkProps {
+interface AppLinkProps extends RouterLinkProps {
   to: Routes
 }
-defineProps<ApplinkProps>()
+defineProps<AppLinkProps>()
 </script>
 
 <template>
