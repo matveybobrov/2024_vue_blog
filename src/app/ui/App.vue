@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import NavBar from '@/widgets/NavBar';
 
-import { useTheme } from '../providers/theme';
-const {theme, toggleTheme} = useTheme()
+import { inject } from 'vue';
+import { themeProvider } from '../providers/theme';
+const {theme} = inject(themeProvider, {})
 </script>
 
 <template>
@@ -10,7 +11,6 @@ const {theme, toggleTheme} = useTheme()
     <NavBar />
     <RouterView />
   </div>
-  <button @click="toggleTheme">toggle theme</button>
 </template>
 
 <style lang="scss">
