@@ -1,11 +1,8 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts"],
-  "exclude": ["src/**/__tests__/*"],
+  "exclude": ["src/**/*.test.ts"],
   "compilerOptions": {
-    "extensions": {
-      "**/*.ts": "TS"
-    },
     "composite": true,
     "noEmit": true,
     // This baseUrl + paths config enables auto absolute imports with alias!
