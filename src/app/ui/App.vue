@@ -1,20 +1,25 @@
 <script setup lang="ts">
+import { inject } from 'vue';
+
 import NavBar from '@/widgets/NavBar';
 import SideBar from '@/widgets/SideBar';
 
-import { inject } from 'vue';
 import { themeProvider } from '../providers/theme';
-const {theme} = inject(themeProvider, {})
+
+const { theme } = inject(themeProvider, {})
 </script>
 
 <template>
-  <div class="app" :class="theme">
-    <NavBar />
-    <div class="content-page">
-      <SideBar />
-      <RouterView class="main-page"/>
+    <div
+        class="app"
+        :class="theme"
+    >
+        <NavBar />
+        <div class="content-page">
+            <SideBar />
+            <RouterView class="main-page" />
+        </div>
     </div>
-  </div>
 </template>
 
 <style lang="scss">

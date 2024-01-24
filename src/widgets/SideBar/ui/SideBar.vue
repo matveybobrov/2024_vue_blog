@@ -1,15 +1,15 @@
 <script setup lang='ts'>
-import ThemeSwitcher from "@/widgets/ThemeSwitcher";
-import LangSwitcher from "@/widgets/LangSwitcher";
+import LangSwitcher from '@/widgets/LangSwitcher';
+import ThemeSwitcher from '@/widgets/ThemeSwitcher';
 </script>
 
 <template>
-  <div class="sidebar">
-    <div class="switchers">
-      <ThemeSwitcher />
-      <LangSwitcher />
+    <div class="sidebar">
+        <div class="switchers">
+            <ThemeSwitcher />
+            <LangSwitcher />
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped lang='scss'>

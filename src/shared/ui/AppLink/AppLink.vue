@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import type { RouterLinkProps } from 'vue-router'
-import { Routes } from "@/app/providers/router"
+
+import { Routes } from '@/app/providers/router'
 
 interface AppLinkProps extends RouterLinkProps {
   to: Routes
@@ -9,9 +10,12 @@ defineProps<AppLinkProps>()
 </script>
 
 <template>
-  <RouterLink :to="to" class="link">
-    <slot/>
-  </RouterLink>
+    <RouterLink
+        :to="to"
+        class="link"
+    >
+        <slot />
+    </RouterLink>
 </template>
 
 <style scoped lang='scss'>

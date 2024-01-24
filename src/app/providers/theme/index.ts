@@ -1,5 +1,6 @@
 import type { App, InjectionKey } from 'vue'
-import { theme, toggleTheme, Theme } from './theme'
+
+import { Theme, theme, toggleTheme } from './theme'
 
 export type ThemeProvider = {
   theme?: typeof theme
@@ -7,7 +8,7 @@ export type ThemeProvider = {
   Theme?: typeof Theme
 }
 
-export const themeProvider = Symbol() as InjectionKey<ThemeProvider>
+export const themeProvider = Symbol('themeProvider') as InjectionKey<ThemeProvider>
 
 export default {
   install(app: App) {

@@ -1,16 +1,23 @@
 <script setup lang='ts'>
-import { inject } from "vue";
-import { translationProvider } from "@/app/providers/translation";
-import BaseButton, { BaseButtonTheme } from "@/shared/ui/BaseButton"
-import LanguageIcon from "@/shared/assets/icons/language.svg"
+import { inject } from 'vue';
 
-const {toggleLang} = inject(translationProvider, {})
+import { translationProvider } from '@/app/providers/translation';
+
+import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton'
+
+import LanguageIcon from '@/shared/assets/icons/language.svg'
+
+const { toggleLang } = inject(translationProvider, {})
 </script>
 
 <template>
-  <BaseButton :theme="BaseButtonTheme.CLEAR" class="langSwitcher" @click="toggleLang">
-    <LanguageIcon class="icon"/>
-  </BaseButton> 
+    <BaseButton
+        :theme="BaseButtonTheme.CLEAR"
+        class="langSwitcher"
+        @click="toggleLang"
+    >
+        <LanguageIcon class="icon" />
+    </BaseButton>
 </template>
 
 <style scoped lang='scss'>

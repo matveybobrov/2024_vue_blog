@@ -1,10 +1,9 @@
 import { createApp } from 'vue'
-import App from './ui/App.vue'
 
 import { router } from './providers/router'
 import theme from './providers/theme'
-import translation from './providers/translation'
-import { Language } from './providers/translation'
+import translation, { Language } from './providers/translation'
+import App from './ui/App.vue'
 
 const app = createApp(App)
 

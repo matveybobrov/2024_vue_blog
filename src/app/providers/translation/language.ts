@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+
 import { translations } from '@/shared/config/translations'
 
 export enum Language {
@@ -23,4 +24,6 @@ function toggleLang(): void {
   currentLang.value = currentLang.value === Language.RU ? Language.EN : Language.RU
 }
 
-export { currentLang, setLang, t, toggleLang }
+export {
+  currentLang, setLang, t, toggleLang
+}

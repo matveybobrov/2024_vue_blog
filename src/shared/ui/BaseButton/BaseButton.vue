@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import type { BaseButtonTheme } from '.';
+
 interface BaseButtonProps {
   theme?: BaseButtonTheme
 }
@@ -7,7 +8,13 @@ defineProps<BaseButtonProps>()
 </script>
 
 <template>
-  <button class="button" :class="theme"><slot/></button>
+    <button
+        type="button"
+        class="button"
+        :class="theme"
+    >
+        <slot />
+    </button>
 </template>
 
 <style scoped lang='scss'>
