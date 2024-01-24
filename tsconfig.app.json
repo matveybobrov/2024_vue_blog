@@ -13,6 +13,7 @@
     // In imports @ will be replaced with ./src
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "types": ["vitest/globals"]
   }
 }

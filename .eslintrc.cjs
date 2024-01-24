@@ -11,8 +11,12 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-airbnb',
-    'plugin:i18next/recommended'
+    'plugin:i18next/recommended',
+    'plugin:vitest-globals/recommended'
   ],
+  env: {
+    'vitest-globals/env': true
+  },
   parserOptions: {
     ecmaVersion: 'latest',
   },
