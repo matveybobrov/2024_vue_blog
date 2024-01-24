@@ -1,26 +1,26 @@
 import { ref } from 'vue'
-import translations from './translations'
+import { translations } from '@/shared/config/translations'
 
 export enum Language {
   RU = 'russian',
   EN = 'english',
 }
 
-function useTranslation(lang: Language) {
-  const currentLang = ref(lang)
+const currentLang = ref(Language.RU)
 
-  function t(text: string): string {
-    const lang = currentLang.value
-    if (lang === Language.RU) return text
-    const translation = translations[text]
-    return translation
-  }
-
-  function toggleLang(): void {
-    currentLang.value = currentLang.value === Language.RU ? Language.EN : Language.RU
-  }
-
-  return { t, toggleLang }
+function setLang(lang: Language): void {
+  currentLang.value = lang
 }
 
-export default useTranslation
+function t(text: string): string {
+  const lang = currentLang.value
+  if (lang === Language.RU) return text
+  const translation = translations[text]
+  return translation
+}
+
+function toggleLang(): void {
+  currentLang.value = currentLang.value === Language.RU ? Language.EN : Language.RU
+}
+
+export { currentLang, setLang, t, toggleLang }
