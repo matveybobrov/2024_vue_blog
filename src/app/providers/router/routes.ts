@@ -14,6 +14,6 @@ export type Route = {
 }
 
 export const routes: Route[] = [
-    { path: Routes.MAIN, component: () => import('@/pages/MainPage') },
-    { path: Routes.ABOUT, component: () => import('@/pages/AboutPage') },
+  { path: Routes.MAIN, component: () => import('@/pages/MainPage') },
+  { path: Routes.ABOUT, component: () => import('@/pages/AboutPage') },
 ]

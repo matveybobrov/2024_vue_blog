@@ -8,23 +8,23 @@ defineProps<BaseButtonProps>()
 </script>
 
 <template>
-    <button
-        type="button"
-        class="BaseButton"
-        :class="theme"
-    >
-        <slot />
-    </button>
+  <button
+    type="button"
+    class="BaseButton"
+    :class="theme"
+  >
+    <slot />
+  </button>
 </template>
 
 <style scoped lang='scss'>
 .BaseButton {
-    cursor: pointer
+  cursor: pointer
 }
 
 .clear {
-    border: none;
-    background: none;
-    outline: none;
+  border: none;
+  background: none;
+  outline: none;
 }
 </style>

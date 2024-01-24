@@ -10,16 +10,16 @@ const { theme } = inject(themeProvider, {})
 </script>
 
 <template>
-    <div
-        class="app"
-        :class="theme"
-    >
-        <NavBar />
-        <div class="content-page">
-            <SideBar />
-            <RouterView class="main-page" />
-        </div>
+  <div
+    class="app"
+    :class="theme"
+  >
+    <NavBar />
+    <div class="content-page">
+      <SideBar />
+      <RouterView class="main-page" />
     </div>
+  </div>
 </template>
 
 <style lang="scss">

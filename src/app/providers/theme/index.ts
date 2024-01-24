@@ -11,7 +11,7 @@ export type ThemeProvider = {
 export const themeProvider = Symbol('themeProvider') as InjectionKey<ThemeProvider>
 
 export default {
-    install(app: App) {
-        app.provide(themeProvider, { theme, toggleTheme, Theme })
-    },
+  install(app: App) {
+    app.provide(themeProvider, { theme, toggleTheme, Theme })
+  },
 }
