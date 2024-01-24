@@ -20,8 +20,9 @@ describe('translation', () => {
     expect(t('тест')).toBe('test')
   })
 
-  test("returns Russian text if translation doesn't exist", () => {
+  test("returns original text if translation doesn't exist", () => {
     setLang(Language.EN)
-    expect(t('фафцуацф')).toBe('фафцуацф')
+    delete translations['тест']
+    expect(t('тест')).toBe('тест')
   })
 })
