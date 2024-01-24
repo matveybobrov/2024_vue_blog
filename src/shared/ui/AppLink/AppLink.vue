@@ -12,15 +12,15 @@ defineProps<AppLinkProps>()
 <template>
     <RouterLink
         :to="to"
-        class="link"
+        class="AppLink"
     >
         <slot />
     </RouterLink>
 </template>
 
 <style scoped lang='scss'>
-.link {
-  color: var(--primary-color);
-  text-decoration: none;
+.AppLink {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 </style>

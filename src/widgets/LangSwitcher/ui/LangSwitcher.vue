@@ -13,7 +13,7 @@ const { toggleLang } = inject(translationProvider, {})
 <template>
     <BaseButton
         :theme="BaseButtonTheme.CLEAR"
-        class="langSwitcher"
+        class="LangSwitcher"
         @click="toggleLang"
     >
         <LanguageIcon class="icon" />
@@ -21,11 +21,12 @@ const { toggleLang } = inject(translationProvider, {})
 </template>
 
 <style scoped lang='scss'>
-.langSwitcher {
-  width: 20px;
-  height: 20px;
+.LangSwitcher {
+    width: 20px;
+    height: 20px;
 }
+
 .icon {
-  color: var(--bg-color-inverted);
+    color: var(--bg-color-inverted);
 }
 </style>

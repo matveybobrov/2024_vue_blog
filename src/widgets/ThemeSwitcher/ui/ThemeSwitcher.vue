@@ -14,7 +14,7 @@ const { theme, toggleTheme, Theme } = inject(themeProvider, {})
 <template>
     <BaseButton
         :theme="BaseButtonTheme.CLEAR"
-        class="themeToggler"
+        class="ThemeSwitcher"
         @click="toggleTheme"
     >
         <LightIcon
@@ -29,13 +29,14 @@ const { theme, toggleTheme, Theme } = inject(themeProvider, {})
 </template>
 
 <style scoped lang='scss'>
-.themeToggler {
-  height: 20px;
-  width: 20px;
+.ThemeSwitcher {
+    height: 20px;
+    width: 20px;
 }
+
 .icon {
-  width: 100%;
-  height: 100%;
-  color: var(--bg-color-inverted);
+    width: 100%;
+    height: 100%;
+    color: var(--bg-color-inverted);
 }
 </style>

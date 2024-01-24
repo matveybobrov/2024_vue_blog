@@ -24,9 +24,11 @@ const { theme } = inject(themeProvider, {})
 
 <style lang="scss">
 @import '../styles/index';
+
 .content-page {
   display: flex;
 }
+
 .main-page {
   flex-grow: 1;
   padding: 20px;

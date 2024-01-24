@@ -10,7 +10,7 @@ defineProps<BaseButtonProps>()
 <template>
     <button
         type="button"
-        class="button"
+        class="BaseButton"
         :class="theme"
     >
         <slot />
@@ -18,12 +18,13 @@ defineProps<BaseButtonProps>()
 </template>
 
 <style scoped lang='scss'>
-.button {
-  cursor: pointer;
+.BaseButton {
+    cursor: pointer
 }
+
 .clear {
-  border: none;
-  background: none;
-  outline: none;
+    border: none;
+    background: none;
+    outline: none;
 }
 </style>

@@ -9,6 +9,6 @@ const defaultTheme = (localStorage.getItem('theme') as Theme) || Theme.LIGHT
 export const theme = ref<Theme>(defaultTheme)
 
 export function toggleTheme() {
-  theme.value = theme.value === Theme.DARK ? Theme.LIGHT : Theme.DARK
-  localStorage.setItem('theme', theme.value)
+    theme.value = theme.value === Theme.DARK ? Theme.LIGHT : Theme.DARK
+    localStorage.setItem('theme', theme.value)
 }
