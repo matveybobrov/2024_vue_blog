@@ -17,7 +17,7 @@ function t(text: string): string {
   const lang = currentLang.value
   if (lang === Language.RU) return text
   const translation = translations[text]
-  return translation
+  return translation ?? text
 }
 
 function toggleLang(): void {

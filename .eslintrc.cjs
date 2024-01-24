@@ -56,6 +56,7 @@ module.exports = {
           ['^(@/shared/ui)(/.*|$)'],
           // Assets
           ['^(@/shared/assets)(/.*|$)'],
+          ['^(@)(/.*|$)'],
           // Parent imports. Put `..` last.
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
           // Other relative imports. Put same-folder imports and `.` last.
