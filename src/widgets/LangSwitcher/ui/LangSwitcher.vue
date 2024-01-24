@@ -19,6 +19,6 @@ const {toggleLang} = inject(translationProvider, {})
   height: 20px;
 }
 .icon {
-  color: var(--bg-color);
+  color: var(--bg-color-inverted);
 }
 </style>

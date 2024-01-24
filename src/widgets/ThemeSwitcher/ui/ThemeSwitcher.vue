@@ -9,8 +9,8 @@
 
 <template>
   <BaseButton :theme="BaseButtonTheme.CLEAR" class="themeToggler" @click="toggleTheme">
-    <LightIcon v-if="theme === Theme?.DARK" class="icon" fill="#000"/>
-    <DarkIcon v-else class="icon" fill="#fff"/>
+    <LightIcon v-if="theme === Theme?.DARK" class="icon"/>
+    <DarkIcon v-else class="icon"/>
   </BaseButton>
 </template>
 
@@ -22,6 +22,6 @@
 .icon {
   width: 100%;
   height: 100%;
-  color: var(--bg-color);
+  color: var(--bg-color-inverted);
 }
 </style>

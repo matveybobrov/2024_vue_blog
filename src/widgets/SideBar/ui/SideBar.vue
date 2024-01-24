@@ -16,7 +16,8 @@ import LangSwitcher from "@/widgets/LangSwitcher";
 .sidebar {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width-collapsed);
-  background-color: var(--bg-color-inverted);
+  background-color: var(--bg-color);
+  border-right: 2px solid var(--secondary-color);
   position: relative;
   transition: width 0.2s;
   &:hover {

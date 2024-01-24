@@ -16,7 +16,7 @@ defineProps<AppLinkProps>()
 
 <style scoped lang='scss'>
 .link {
-  color: var(--primary-color-inverted);
+  color: var(--primary-color);
   text-decoration: none;
 }
 </style>
