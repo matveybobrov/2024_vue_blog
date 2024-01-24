@@ -2,7 +2,7 @@ import { translations } from '@/shared/config/translations';
 
 import { Language, setLang, t } from './language';
 
-beforeAll(() => {
+beforeEach(() => {
   translations['тест'] = 'test'
 })
 afterAll(() => {
