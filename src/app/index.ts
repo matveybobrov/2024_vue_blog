@@ -10,6 +10,6 @@ const app = createApp(App)
 
 app.use(router)
 app.use(theme)
-app.use(translation, { lanugage: Language.RU })
+app.use(translation, { language: Language.RU })
 
 export default app
