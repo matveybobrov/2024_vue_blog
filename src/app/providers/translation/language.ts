@@ -12,16 +12,19 @@ const currentLang = ref(Language.RU)
 function setLang(lang: Language): void {
   currentLang.value = lang
 }
-
-function t(text: string): string {
-  const lang = currentLang.value
-  if (lang === Language.RU) return text
-  const translation = translations[text]
-  return translation ?? text
-}
-
 function toggleLang(): void {
   currentLang.value = currentLang.value === Language.RU ? Language.EN : Language.RU
+}
+
+function t(text: string): string {
+  switch (currentLang.value) {
+  case Language.RU:
+    return text
+  case Language.EN:
+    return translations[text] ?? text
+  default:
+    return text
+  }
 }
 
 export {
