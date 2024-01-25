@@ -2,9 +2,9 @@
 import NavBar from '@/widgets/NavBar';
 import SideBar from '@/widgets/SideBar';
 
-import { useTheme } from '../providers/theme';
+import { useGlobalTheme } from '../providers/theme';
 
-const { theme } = useTheme();
+const { theme } = useGlobalTheme();
 </script>
 
 <template>

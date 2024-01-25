@@ -1,11 +1,11 @@
 <script setup lang='ts'>
-import { useTranslation } from '@/app/providers/translation';
+import { useGlobalTranslation } from '@/app/providers/translation';
 
 import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton'
 
 import LanguageIcon from '@/shared/assets/icons/language.svg'
 
-const { toggleLang } = useTranslation()
+const { toggleLang } = useGlobalTranslation()
 </script>
 
 <template>

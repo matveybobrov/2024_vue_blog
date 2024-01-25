@@ -6,7 +6,7 @@ import {
 
 export { Language }
 
-export function useTranslation() {
+export function useGlobalTranslation() {
   return { toggleLang }
 }
 
