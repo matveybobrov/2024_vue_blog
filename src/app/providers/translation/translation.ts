@@ -7,13 +7,24 @@ export enum Language {
   EN = 'english',
 }
 
-export const currentLang = ref(Language.RU)
+const defaultLanguage = (localStorage.getItem('language') as Language) || Language.RU
+export const currentLang = ref(defaultLanguage)
 
 export function setLang(lang: Language): void {
   currentLang.value = lang
+  localStorage.setItem('language', currentLang.value)
 }
 export function toggleLang(): void {
-  currentLang.value = currentLang.value === Language.RU ? Language.EN : Language.RU
+  switch (currentLang.value) {
+  case Language.RU:
+    setLang(Language.EN)
+    break
+  case Language.EN:
+    setLang(Language.RU)
+    break
+  default:
+    setLang(Language.RU)
+  }
 }
 
 export function t(text: string): string {

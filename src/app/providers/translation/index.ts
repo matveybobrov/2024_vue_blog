@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 
 import {
-  Language, setLang, t, toggleLang
+  Language, t, toggleLang
 } from './translation'
 
 export { Language }
@@ -11,8 +11,7 @@ export function useGlobalTranslation() {
 }
 
 export default {
-  install(app: App, options: Record<'language', Language>) {
-    setLang(options.language)
+  install(app: App) {
     // eslint-disable-next-line no-param-reassign
     app.config.globalProperties.t = t
   },
