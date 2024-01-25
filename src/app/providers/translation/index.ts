@@ -1,24 +1,19 @@
-import type { App, InjectionKey } from 'vue'
+import type { App } from 'vue'
 
 import {
   Language, setLang, t, toggleLang
-} from './language'
+} from './translation'
 
 export { Language }
 
-export type TranslationProvider = {
-  toggleLang?: () => void
+export function useTranslation() {
+  return { toggleLang }
 }
-
-export const translationProvider = Symbol(
-  'translationProvider'
-) as InjectionKey<TranslationProvider>
 
 export default {
   install(app: App, options: Record<'language', Language>) {
     setLang(options.language)
     // eslint-disable-next-line no-param-reassign
     app.config.globalProperties.t = t
-    app.provide(translationProvider, { toggleLang })
   },
 }

@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { inject } from 'vue';
-
 import NavBar from '@/widgets/NavBar';
 import SideBar from '@/widgets/SideBar';
 
-import { themeProvider } from '../providers/theme';
+import { useTheme } from '../providers/theme';
 
-const { theme } = inject(themeProvider, {})
+const { theme } = useTheme();
 </script>
 
 <template>

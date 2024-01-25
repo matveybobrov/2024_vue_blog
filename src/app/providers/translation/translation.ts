@@ -7,16 +7,16 @@ export enum Language {
   EN = 'english',
 }
 
-const currentLang = ref(Language.RU)
+export const currentLang = ref(Language.RU)
 
-function setLang(lang: Language): void {
+export function setLang(lang: Language): void {
   currentLang.value = lang
 }
-function toggleLang(): void {
+export function toggleLang(): void {
   currentLang.value = currentLang.value === Language.RU ? Language.EN : Language.RU
 }
 
-function t(text: string): string {
+export function t(text: string): string {
   switch (currentLang.value) {
   case Language.RU:
     return text
@@ -25,8 +25,4 @@ function t(text: string): string {
   default:
     return text
   }
-}
-
-export {
-  currentLang, setLang, t, toggleLang
 }

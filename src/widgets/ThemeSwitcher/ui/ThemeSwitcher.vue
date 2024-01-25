@@ -1,14 +1,12 @@
 <script setup lang='ts'>
-import { inject } from 'vue';
-
-import { themeProvider } from '@/app/providers/theme';
+import { useTheme } from '@/app/providers/theme';
 
 import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton'
 
 import DarkIcon from '@/shared/assets/icons/theme-dark.svg'
 import LightIcon from '@/shared/assets/icons/theme-light.svg'
 
-const { theme, toggleTheme, Theme } = inject(themeProvider, {})
+const { Theme, theme, toggleTheme } = useTheme()
 </script>
 
 <template>

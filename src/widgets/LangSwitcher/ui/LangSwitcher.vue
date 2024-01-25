@@ -1,13 +1,11 @@
 <script setup lang='ts'>
-import { inject } from 'vue';
-
-import { translationProvider } from '@/app/providers/translation';
+import { useTranslation } from '@/app/providers/translation';
 
 import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton'
 
 import LanguageIcon from '@/shared/assets/icons/language.svg'
 
-const { toggleLang } = inject(translationProvider, {})
+const { toggleLang } = useTranslation()
 </script>
 
 <template>
