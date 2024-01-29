@@ -22,8 +22,21 @@ export type Route = {
 }
 
 export const routes: Route[] = [
-  { path: Routes.MAIN, component: () => import('@/pages/MainPage') },
-  { path: Routes.ABOUT, component: () => import('@/pages/AboutPage') },
-  { path: Routes.ERROR, component: () => import('@/pages/ErrorPage'), meta: { layout: Layouts.CLEAR } },
-  { path: Routes.NOT_FOUND, component: () => import('@/pages/NotFoundPage') }
+  {
+    path: Routes.MAIN,
+    component: () => import('@/pages/MainPage')
+  },
+  {
+    path: Routes.ABOUT,
+    component: () => import('@/pages/AboutPage')
+  },
+  {
+    path: Routes.ERROR,
+    component: () => import('@/pages/ErrorPage'),
+    meta: { layout: Layouts.CLEAR }
+  },
+  {
+    path: Routes.NOT_FOUND,
+    component: () => import('@/pages/NotFoundPage')
+  }
 ]
