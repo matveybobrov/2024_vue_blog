@@ -6,7 +6,7 @@ import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton'
 import DarkIcon from '@/shared/assets/icons/theme-dark.svg'
 import LightIcon from '@/shared/assets/icons/theme-light.svg'
 
-const { Theme, theme, toggleTheme } = useGlobalTheme()
+const { toggleTheme, theme, Theme } = useGlobalTheme()
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { Theme, theme, toggleTheme } = useGlobalTheme()
     @click="toggleTheme"
   >
     <LightIcon
-      v-if="theme === Theme?.DARK"
+      v-if="theme === Theme.DARK"
       class="icon"
     />
     <DarkIcon
