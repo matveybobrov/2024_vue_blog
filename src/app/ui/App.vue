@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import NavBar from '@/widgets/NavBar';
-import SideBar from '@/widgets/SideBar';
-
+import { useLayout } from '../config/layout';
 import { useGlobalTheme } from '../providers/theme';
 
+import AppClearLayout from './AppClearLayout.vue';
+import AppMainLayout from './AppMainLayout.vue';
+
+const { layout, Layouts } = useLayout()
 const { theme } = useGlobalTheme();
 </script>
 
@@ -12,11 +14,8 @@ const { theme } = useGlobalTheme();
     class="app"
     :class="theme"
   >
-    <NavBar />
-    <div class="content-page">
-      <SideBar />
-      <RouterView class="main-page" />
-    </div>
+    <AppClearLayout v-if="layout === Layouts.CLEAR" />
+    <AppMainLayout v-else />
   </div>
 </template>
 
