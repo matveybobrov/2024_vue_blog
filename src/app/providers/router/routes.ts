@@ -18,6 +18,7 @@ export type Route = {
   // Use lazy loading for routes
   component: () => Promise<Component>
   name?: string
+  // Use only layoutes defined in enum
   meta?: Record<'layout', Layouts>
 }
 
