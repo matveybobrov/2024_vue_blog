@@ -1,10 +1,9 @@
 // Makes it able to use test property on vite config to configure vitest
 /// <reference types="vitest" />
 
-import { fileURLToPath, URL } from 'node:url'
-
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
 import svgLoader from 'vite-svg-loader'
 
 // https://vitejs.dev/config/
