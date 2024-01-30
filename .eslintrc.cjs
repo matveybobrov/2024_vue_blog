@@ -134,7 +134,8 @@ module.exports = {
           '**/jest.config.ts', // jest config
           '**/jest.setup.ts', // jest setup
           // Now eslint doesn't show an error when importing '@rushstack' in this file
-          '.eslintrc.cjs'
+          '.eslintrc.cjs',
+          'setup.vitest.ts'
         ],
         'optionalDependencies': false
       }
