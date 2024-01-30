@@ -13,7 +13,9 @@ export default defineConfig({
   test: {
     globals: true,
     watch: false,
+    // It's needed to render components in tests
     environment: 'happy-dom',
+    // It imports types to use .toBeInTheDocument()
     setupFiles: ['./setup.vitest.ts'],
   },
   resolve: {
