@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-airbnb',
+    // Lints for translations in templates - t("")
     'plugin:i18next/recommended',
     'plugin:vitest-globals/recommended'
   ],
@@ -41,6 +42,22 @@ module.exports = {
     // Same for no-shadow
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
+    // Prevent import errors in test files
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        'devDependencies': [
+          // Now eslint doesn't show an error when importing '@testing-library' in test files
+          '**/*.test.ts', // actual test files
+          'setup.vitest.ts', // tests setup config
+          // Now eslint doesn't show an error when importing '@rushstack' in this file
+          '.eslintrc.cjs',
+          // And for vite.config.ts
+          'vite.config.ts'
+        ],
+        'optionalDependencies': false
+      }
+    ],
     // Imports sorting
     'simple-import-sort/imports': [
       'error',
@@ -123,21 +140,6 @@ module.exports = {
       'skipHTMLAttributeValues': false,
       'skipHTMLTextContents': false,
     }],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        'devDependencies': [
-          // Now eslint doesn't show an error when importing '@testing-library' in test files
-          '**/*.test.ts', // actual test files
-          'setup.vitest.ts', // tests setup config
-          // Now eslint doesn't show an error when importing '@rushstack' in this file
-          '.eslintrc.cjs',
-          // And for vite.config.ts
-          'vite.config.ts'
-        ],
-        'optionalDependencies': false
-      }
-    ]
   },
   settings: {
     'import/resolver': {
