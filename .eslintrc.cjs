@@ -123,6 +123,22 @@ module.exports = {
       'skipHTMLAttributeValues': false,
       'skipHTMLTextContents': false,
     }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        'devDependencies': [
+          // Now eslint doesn't show an error when importing '@testing-library' in test files
+          'test.ts', // repos with a single test file
+          'test-*.ts', // repos with multiple top-level test files
+          '**/*{.,_}{test,spec}.ts', // tests where the extension or filename suffix denotes that it is a test
+          '**/jest.config.ts', // jest config
+          '**/jest.setup.ts', // jest setup
+          // Now eslint doesn't show an error when importing '@rushstack' in this file
+          '.eslintrc.cjs'
+        ],
+        'optionalDependencies': false
+      }
+    ]
   },
   settings: {
     'import/resolver': {
