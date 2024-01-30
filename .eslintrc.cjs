@@ -115,6 +115,14 @@ module.exports = {
     'vue/component-name-in-template-casing': ['error', 'PascalCase', {
       'registeredComponentsOnly': true,
     }],
+    'vue/no-irregular-whitespace': ['error', {
+      'skipStrings': true,
+      'skipComments': false,
+      'skipRegExps': false,
+      'skipTemplates': false,
+      'skipHTMLAttributeValues': false,
+      'skipHTMLTextContents': false,
+    }],
     'import/no-extraneous-dependencies': [
       'error',
       {
