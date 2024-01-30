@@ -11,15 +11,16 @@ import svgLoader from 'vite-svg-loader'
 export default defineConfig({
   plugins: [vue(), svgLoader()],
   test: {
+    // Enables global vitest variables without need to import it
     globals: true,
     watch: false,
-    // It's needed to render components in tests
+    // Needed to render components in tests
     environment: 'happy-dom',
-    // It imports types to use .toBeInTheDocument()
+    // Imports types to use .toBeInTheDocument()
     setupFiles: ['./setup.vitest.ts'],
   },
   resolve: {
-    // In imports @ will be replaced with ./src
+    // @ will be replaced with ./src in imports when running eslint
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },

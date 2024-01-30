@@ -132,6 +132,8 @@ module.exports = {
           'setup.vitest.ts', // tests setup config
           // Now eslint doesn't show an error when importing '@rushstack' in this file
           '.eslintrc.cjs',
+          // And for vite.config.ts
+          'vite.config.ts'
         ],
         'optionalDependencies': false
       }
