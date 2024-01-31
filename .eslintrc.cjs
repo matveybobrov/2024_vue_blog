@@ -63,13 +63,13 @@ module.exports = {
       'error',
       {
         'groups': [
-          // Packages `vue` related packages come first.
+          // Vue and Vue-router related packages come first.
           ['^vue|^vue-router', '^@?\\w'],
           // Main slices first
           ['^(@/app|@/providers|@/widgets)(/.*|$)'],
-          // Side effect imports.
+          // Idk if it's needed
           ['^\\u0000'],
-          // Custom components
+          // Ui components
           ['^(@/shared/ui)(/.*|$)'],
           // Assets
           ['^(@/shared/assets)(/.*|$)'],
