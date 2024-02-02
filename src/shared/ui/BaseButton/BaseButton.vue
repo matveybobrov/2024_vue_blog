@@ -19,7 +19,8 @@ defineProps<BaseButtonProps>()
 
 <style scoped lang='scss'>
 .BaseButton {
-  cursor: pointer
+  cursor: pointer;
+  color: var(--primary-color)
 }
 
 .clear {
