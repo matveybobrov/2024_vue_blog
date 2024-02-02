@@ -1,8 +1,8 @@
-import type { Decorator } from '@storybook/vue3'
+import { Theme } from '@/app/providers/theme/theme'
 
-const ThemeDecorator: Decorator = () => ({
+const ThemeDecorator = (theme: Theme) => () => ({
   template: `
-      <div class="app dark"><story/></div>
+      <div class="app ${theme}"><story/></div>
     `,
 })
 
