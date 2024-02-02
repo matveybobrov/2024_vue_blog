@@ -1,9 +1,5 @@
 import type { Meta } from '@storybook/vue3'
 
-import { Theme } from '@/app/providers/theme/theme'
-
-import { StyleDecorator, ThemeDecorator } from '@/shared/config/storybook'
-
 import BaseButton from './BaseButton.vue'
 import { BaseButtonTheme } from './index'
 
@@ -23,7 +19,6 @@ const meta = {
       defaultValue: 'default',
     },
   },
-  decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT)],
 } satisfies Meta<typeof BaseButton>
 
 export default meta
