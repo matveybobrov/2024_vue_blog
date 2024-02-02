@@ -27,4 +27,13 @@ defineProps<BaseButtonProps>()
   background: none;
   outline: none;
 }
+
+.outline {
+  padding: 5px;
+  border: 1px solid;
+  border-color: var(--secondary-color);
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  outline: none;
+}
 </style>

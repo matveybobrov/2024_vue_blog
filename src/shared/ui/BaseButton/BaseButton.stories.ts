@@ -1,5 +1,5 @@
 import { BaseButtonTheme } from './index'
-import type { Meta, StoryFn } from '@storybook/vue3'
+import type { Meta } from '@storybook/vue3'
 
 import BaseButton from './BaseButton.vue'
 
@@ -15,24 +15,30 @@ const meta = {
     },
     theme: {
       control: { type: 'select' },
-      options: [BaseButtonTheme.PRIMARY, BaseButtonTheme.CLEAR],
-      defaultValue: BaseButtonTheme.PRIMARY,
+      options: ['default', BaseButtonTheme.CLEAR, BaseButtonTheme.OUTLINE],
+      defaultValue: 'default',
     },
   },
 } satisfies Meta<typeof BaseButton>
 
 export default meta
 
-export const PrimaryButton = {
+export const Default = {
   args: {
-    default: 'Primary',
-    theme: BaseButtonTheme.PRIMARY,
+    default: 'Default',
   },
 }
 
-export const ClearButton = {
+export const Clear = {
   args: {
     default: 'Clear',
     theme: BaseButtonTheme.CLEAR,
+  },
+}
+
+export const Outline = {
+  args: {
+    default: 'Outline',
+    theme: BaseButtonTheme.OUTLINE,
   },
 }

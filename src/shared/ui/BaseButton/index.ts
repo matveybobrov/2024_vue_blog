@@ -2,6 +2,6 @@ import BaseButton from './BaseButton.vue'
 
 export enum BaseButtonTheme {
   CLEAR = 'clear',
-  PRIMARY = 'primary'
+  OUTLINE = 'outline',
 }
 export default BaseButton
