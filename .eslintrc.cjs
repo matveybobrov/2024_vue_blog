@@ -4,17 +4,7 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 module.exports = {
   root: true,
   plugins: ['import', 'simple-import-sort', 'i18next'],
-  extends: [
-    'plugin:vue/vue3-essential',
-    'plugin:vue/vue3-recommended',
-    'plugin:vue/vue3-strongly-recommended',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-airbnb',
-    // Lints for translations in templates - t("")
-    'plugin:i18next/recommended',
-    'plugin:vitest-globals/recommended'
-  ],
+  extends: ['plugin:vue/vue3-essential', 'plugin:vue/vue3-recommended', 'plugin:vue/vue3-strongly-recommended', 'eslint:recommended', '@vue/eslint-config-typescript', '@vue/eslint-config-airbnb', 'plugin:i18next/recommended', 'plugin:vitest-globals/recommended', 'plugin:storybook/recommended'],
   env: {
     'vitest-globals/env': true
   },
