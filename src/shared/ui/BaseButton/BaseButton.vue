@@ -20,10 +20,10 @@ defineProps<BaseButtonProps>()
 <style scoped lang='scss'>
 .BaseButton {
   cursor: pointer;
-  color: var(--primary-color)
 }
 
 .clear {
+  color: var(--primary-color);
   border: none;
   background: none;
   outline: none;
@@ -32,9 +32,9 @@ defineProps<BaseButtonProps>()
 .outline {
   padding: 5px;
   border: 1px solid;
-  border-color: var(--secondary-color);
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  border-color: var(--primary-color);
+  background: var(--primary-color-inverted);
+  color: var(--primary-color);
   outline: none;
 }
 </style>

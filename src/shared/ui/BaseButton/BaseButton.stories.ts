@@ -23,7 +23,7 @@ const meta = {
       defaultValue: 'default',
     },
   },
-  decorators: [StyleDecorator, ThemeDecorator(Theme.DARK)],
+  decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT)],
 } satisfies Meta<typeof BaseButton>
 
 export default meta
