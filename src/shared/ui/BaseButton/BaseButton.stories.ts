@@ -7,22 +7,32 @@ const meta = {
   title: 'shared/BaseButton',
   component: BaseButton,
   tags: ['autodocs'],
+  argTypes: {
+    default: {
+      control: 'text',
+      description: 'Slot content',
+      defaultValue: 'Button',
+    },
+    theme: {
+      control: { type: 'select' },
+      options: [BaseButtonTheme.PRIMARY, BaseButtonTheme.CLEAR],
+      defaultValue: BaseButtonTheme.PRIMARY,
+    },
+  },
 } satisfies Meta<typeof BaseButton>
 
 export default meta
 
-export const PrimaryButton: StoryFn<typeof BaseButton> = (args) => ({
-  components: { BaseButton },
-  setup() {
-    return { args, theme: BaseButtonTheme.PRIMARY }
+export const PrimaryButton = {
+  args: {
+    default: 'Primary',
+    theme: BaseButtonTheme.PRIMARY,
   },
-  template: '<BaseButton v-bind="args" :theme>Button</BaseButton>',
-})
+}
 
-export const ClearButton: StoryFn<typeof BaseButton> = (args) => ({
-  components: { BaseButton },
-  setup() {
-    return { args, theme: BaseButtonTheme.CLEAR }
+export const ClearButton = {
+  args: {
+    default: 'Clear',
+    theme: BaseButtonTheme.CLEAR,
   },
-  template: '<BaseButton v-bind="args" :theme>Clear</BaseButton>',
-})
+}
