@@ -11,7 +11,7 @@ import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/shared/ui/BaseBut
 import AboutIcon from '@/shared/assets/icons/about.svg'
 import HomeIcon from '@/shared/assets/icons/home.svg'
 
-const collapsed = ref(false)
+const collapsed = ref(true)
 </script>
 
 <template>
