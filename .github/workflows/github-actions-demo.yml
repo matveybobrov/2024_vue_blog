@@ -1,6 +1,6 @@
 name: Linting, testing
 on:
-  # Steps described below will run on this actions
+  # Steps described below will run on these actions
   push:
     branches: [main]
   pull_request:
