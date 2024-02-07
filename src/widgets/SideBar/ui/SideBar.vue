@@ -20,10 +20,6 @@ import ThemeSwitcher from '@/widgets/ThemeSwitcher';
   border-right: 2px solid var(--secondary-color);
   position: relative;
   transition: width 0.2s;
-
-  &:hover {
-    width: var(--sidebar-width)
-  }
 }
 
 .switchers {
