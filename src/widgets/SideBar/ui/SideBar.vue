@@ -1,66 +1,118 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
 
+import { Routes } from '@/app/providers/router';
 import LangSwitcher from '@/widgets/LangSwitcher';
 import ThemeSwitcher from '@/widgets/ThemeSwitcher';
 
+import AppLink from '@/shared/ui/AppLink';
 import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/shared/ui/BaseButton';
 
-const expanded = ref(false)
+import AboutIcon from '@/shared/assets/icons/about.svg'
+import HomeIcon from '@/shared/assets/icons/home.svg'
+
+const collapsed = ref(false)
 </script>
 
 <template>
   <div
     class="SideBar"
-    :class="{ expanded }"
+    :class="{ collapsed }"
   >
-    <div
-      class="switchers"
-    >
+    <div class="links">
+      <AppLink
+        class="links__item"
+        :to="Routes.MAIN"
+      >
+        <HomeIcon class="links__item__icon" />
+        <div class="links__item__text">
+          {{ t('Главная') }}
+        </div>
+      </AppLink>
+      <AppLink
+        class="links__item"
+        :to="Routes.ABOUT"
+      >
+        <AboutIcon class="links__item__icon" />
+        <div class="links__item__text">
+          {{ t('О сайте') }}
+        </div>
+      </AppLink>
+    </div>
+    <div class="switchers">
       <ThemeSwitcher />
       <LangSwitcher />
     </div>
     <BaseButton
       :theme="BaseButtonTheme.BACKGROUND"
       :size="BaseButtonSize.L"
-      class="expand-btn"
-      @click="expanded = !expanded"
+      class="collapse-btn"
+      @click="collapsed = !collapsed"
     >
-      {{ expanded ? '<' : '>' }}
+      {{ collapsed ? '>' : '<' }}
     </BaseButton>
   </div>
 </template>
 
 <style scoped lang='scss'>
 .SideBar {
+  padding-top: 20px;
   height: calc(100vh - var(--navbar-height));
-  width: var(--sidebar-width-collapsed);
+  width: var(--sidebar-width);
   background-color: var(--bg-color);
   border-right: 2px solid var(--secondary-color);
   position: relative;
   transition: width 0.2s;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  &__item {
+    display: flex;
+    gap: 10px;
+
+    &__icon {
+      fill: var(--bg-color-inverted);
+      height: 20px;
+      width: 20px
+    }
+
+    &__text {
+      white-space: nowrap;
+    }
+  }
+
+}
+
 .switchers {
   position: absolute;
   bottom: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
   gap: 10px;
 }
 
-.expanded {
-  width: var(--sidebar-width);
+.collapsed {
+  width: var(--sidebar-width-collapsed);
 
   .switchers {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links__item__text {
+    width: 0;
+    overflow: hidden;
   }
 }
 
-.expand-btn {
+.collapse-btn {
   position: absolute;
   top: 50%;
   transform: translate(100%, -50%);

@@ -1,20 +1,8 @@
 <script setup lang="ts">
-import { Routes } from '@/app/providers/router';
-
-import AppLink from '@/shared/ui/AppLink';
 </script>
 
 <template>
-  <div class="NavBar">
-    <div class="links">
-      <AppLink :to="Routes.MAIN">
-        {{ t('Главная') }}
-      </AppLink>
-      <AppLink :to="Routes.ABOUT">
-        {{ t('О сайте') }}
-      </AppLink>
-    </div>
-  </div>
+  <div class="NavBar" />
 </template>
 
 <style scoped lang="scss">
