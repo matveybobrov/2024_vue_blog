@@ -1,8 +1,9 @@
 <script setup lang='ts'>
-import type { BaseButtonTheme } from '.';
+import type { BaseButtonSize, BaseButtonTheme } from '.';
 
 interface BaseButtonProps {
-  theme?: BaseButtonTheme
+  theme?: BaseButtonTheme,
+  size?: BaseButtonSize
 }
 defineProps<BaseButtonProps>()
 </script>
@@ -11,7 +12,7 @@ defineProps<BaseButtonProps>()
   <button
     type="button"
     class="BaseButton"
-    :class="theme"
+    :class="[theme, size]"
   >
     <slot />
   </button>
@@ -36,5 +37,35 @@ defineProps<BaseButtonProps>()
   background: var(--primary-color-inverted);
   color: var(--primary-color);
   outline: none;
+}
+
+.background {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: none
+}
+
+.background-inverted {
+  background-color: var(--bg-color-inverted);
+  color: var(--primary-color-inverted);
+  border: none
+}
+
+.size-m {
+  width: var(--font-line-m);
+  height: var(--font-line-m);
+  font: var(--font-m)
+}
+
+.size-l {
+  width: var(--font-line-l);
+  height: var(--font-line-l);
+  font: var(--font-l)
+}
+
+.size-xl {
+  width: var(--font-line-xl);
+  height: var(--font-line-xl);
+  font: var(--font-xl)
 }
 </style>
