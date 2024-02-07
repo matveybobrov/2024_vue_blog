@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router';
 
 import { Routes } from '@/app/providers/router';
 
-import BaseButton from '@/shared/ui/BaseButton';
+import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton';
 
 const router = useRouter()
 function goToMainPage() {
@@ -12,7 +12,18 @@ function goToMainPage() {
 </script>
 
 <template>
-  <BaseButton @click="goToMainPage">
+  <BaseButton
+    :theme="BaseButtonTheme.BACKGROUND"
+    class="page-reloader"
+    @click="goToMainPage"
+  >
     {{ t('Перезагрузить страницу') }}
   </BaseButton>
 </template>
+
+<style scoped lang='scss'>
+.page-reloader {
+  border: 1px solid var(--secondary-color);
+  padding: 5px;
+}
+</style>
