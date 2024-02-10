@@ -1,25 +1,36 @@
 <script setup lang='ts'>
 defineEmits(['close'])
+interface BaseModalProps {
+  open?: boolean
+}
+defineProps<BaseModalProps>()
 </script>
 
 <template>
-  <Teleport to=".app">
-    <div class="modal">
-      <!--Use tabindex to be able to close modal on esc-->
+  <Teleport to="body">
+    <!--Use :duration to properly animate both transitions on leaving DOM-->
+    <Transition :duration="300">
       <div
-        class="overlay"
-        tabindex="0"
-        @click="$emit('close')"
-        @keyup.esc="$emit('close')"
+        v-if="open"
+        class="modal"
       >
+        <!--Use tabindex to be able to close modal on esc-->
         <div
-          class="content"
-          @click.stop
+          class="overlay"
+          tabindex="0"
+          @click="$emit('close')"
+          @keyup.esc="$emit('close')"
         >
-          <slot />
+          <div
+            v-if="open"
+            class="content"
+            @click.stop
+          >
+            <slot />
+          </div>
         </div>
       </div>
-    </div>
+    </Transition>
   </Teleport>
 </template>
 
@@ -30,6 +41,7 @@ defineEmits(['close'])
   top: 0;
   width: 100vw;
   height: 100vh;
+  z-index: var(--modal-z-index);
 }
 
 .overlay {
@@ -39,12 +51,29 @@ defineEmits(['close'])
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: var(--modal-z-index);
 }
 
 .content {
-  background-color: var(--bg-color);
-  max-width: 600px;
+  background-color: #fff;
+  max-width: 50%;
   padding: 20px;
+}
+
+.overlay, .content {
+  transition: all 0.3s ease;
+}
+
+.v-enter-from .content {
+  transform: translateY(-50vh);
+  opacity: 0;
+}
+
+.v-leave-to .content  {
+  transform: translateY(50vh);
+  opacity: 0;
+}
+
+.v-enter-from .overlay, .v-leave-to .overlay {
+  opacity: 0;
 }
 </style>
