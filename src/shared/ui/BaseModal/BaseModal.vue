@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 defineEmits(['close'])
 interface BaseModalProps {
-  open?: boolean
+  isOpen?: boolean
 }
 defineProps<BaseModalProps>()
 </script>
@@ -11,7 +11,7 @@ defineProps<BaseModalProps>()
     <!--Use :duration to properly animate both transitions on leaving DOM-->
     <Transition :duration="300">
       <div
-        v-if="open"
+        v-if="isOpen"
         class="modal"
       >
         <!--Use tabindex to be able to close modal on esc-->
@@ -22,7 +22,6 @@ defineProps<BaseModalProps>()
           @keyup.esc="$emit('close')"
         >
           <div
-            v-if="open"
             class="content"
             @click.stop
           >
@@ -65,12 +64,12 @@ defineProps<BaseModalProps>()
 }
 
 .v-enter-from .content {
-  transform: translateY(-50vh);
+  transform: scale(0.2);
   opacity: 0;
 }
 
 .v-leave-to .content  {
-  transform: translateY(50vh);
+  transform: scale(0.2);
   opacity: 0;
 }
 
