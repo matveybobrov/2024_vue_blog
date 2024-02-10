@@ -3,30 +3,38 @@ defineEmits(['close'])
 </script>
 
 <template>
-  <Teleport to="body">
-    <div
-      class="overlay"
-      tabindex="0"
-      @click="$emit('close')"
-      @keyup.esc="$emit('close')"
-    >
+  <Teleport to=".app">
+    <div class="modal">
+      <!--Use tabindex to be able to close modal on esc-->
       <div
-        class="content"
-        @click.stop
+        class="overlay"
+        tabindex="0"
+        @click="$emit('close')"
+        @keyup.esc="$emit('close')"
       >
-        <slot />
+        <div
+          class="content"
+          @click.stop
+        >
+          <slot />
+        </div>
       </div>
     </div>
   </Teleport>
 </template>
 
 <style scoped lang='scss'>
-.overlay {
+.modal {
   position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
   background-color: var(--overlay-color);
   display: flex;
   align-items: center;

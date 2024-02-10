@@ -20,7 +20,12 @@ const { theme } = useGlobalTheme();
 </template>
 
 <style lang="scss">
-@import '../styles/index';
+.app {
+  font: var(--font-m);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
 
 .content-page {
   display: flex;
