@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import { useLayout } from '../config/layout';
-import { useGlobalTheme } from '../providers/theme';
 
 import AppClearLayout from './AppClearLayout.vue';
 import AppMainLayout from './AppMainLayout.vue';
 
 const { layout, Layouts } = useLayout()
-const { theme } = useGlobalTheme();
 </script>
 
 <template>
   <div
     class="app"
-    :class="theme"
   >
     <AppClearLayout v-if="layout === Layouts.CLEAR" />
     <AppMainLayout v-else />

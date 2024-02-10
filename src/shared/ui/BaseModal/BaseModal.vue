@@ -54,7 +54,8 @@ defineProps<BaseModalProps>()
 }
 
 .content {
-  background-color: #fff;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
   max-width: 50%;
   padding: 20px;
 }
