@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import BaseModal from '@/shared/ui/BaseModal';
-
 import { useLayout } from '../config/layout';
 import { useGlobalTheme } from '../providers/theme';
 
@@ -18,7 +16,6 @@ const { theme } = useGlobalTheme();
   >
     <AppClearLayout v-if="layout === Layouts.CLEAR" />
     <AppMainLayout v-else />
-    <BaseModal>123</BaseModal>
   </div>
 </template>
 

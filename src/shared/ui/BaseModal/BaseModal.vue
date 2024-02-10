@@ -1,6 +1,14 @@
 <template>
-  <div class="overlay">
-    <div class="content">
+  <div
+    class="overlay"
+    tabindex="0"
+    @click="$emit('close')"
+    @keyup.esc="$emit('close')"
+  >
+    <div
+      class="content"
+      @click.stop
+    >
       <slot />
     </div>
   </div>
@@ -17,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: var(--modal-z-index);
 }
 
 .content {
