@@ -1,17 +1,23 @@
+<script setup lang='ts'>
+defineEmits(['close'])
+</script>
+
 <template>
-  <div
-    class="overlay"
-    tabindex="0"
-    @click="$emit('close')"
-    @keyup.esc="$emit('close')"
-  >
+  <Teleport to="body">
     <div
-      class="content"
-      @click.stop
+      class="overlay"
+      tabindex="0"
+      @click="$emit('close')"
+      @keyup.esc="$emit('close')"
     >
-      <slot />
+      <div
+        class="content"
+        @click.stop
+      >
+        <slot />
+      </div>
     </div>
-  </div>
+  </Teleport>
 </template>
 
 <style scoped lang='scss'>
@@ -21,7 +27,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0 0 0 / 50%);
+  background-color: var(--overlay-color);
   display: flex;
   align-items: center;
   justify-content: center;
