@@ -31,5 +31,6 @@
 .content {
   background-color: var(--bg-color);
   max-width: 600px;
+  padding: 20px;
 }
 </style>
