@@ -1,3 +1,3 @@
-import AppLink from './AppLink.vue'
+import BaseAppLink from './BaseAppLink.vue'
 
-export default AppLink
+export default BaseAppLink
