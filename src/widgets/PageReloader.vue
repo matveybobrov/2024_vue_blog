@@ -1,9 +1,9 @@
 <script setup lang='ts'>
+import BaseButton, { BaseButtonTheme } from '@/components/ui/BaseButton';
+
 import { useRouter } from 'vue-router';
 
 import { Routes } from '@/router';
-
-import BaseButton, { BaseButtonTheme } from '@/components/ui/BaseButton';
 
 const router = useRouter()
 function goToMainPage() {

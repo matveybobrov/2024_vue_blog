@@ -1,9 +1,9 @@
 <script setup lang='ts'>
 import BaseButton, { BaseButtonTheme } from '@/components/ui/BaseButton'
 
-import { useGlobalTranslation } from '@/composables/useGlobalTranslation';
-
 import LanguageIcon from '@/assets/icons/language.svg'
+
+import { useGlobalTranslation } from '@/composables/useGlobalTranslation';
 
 const { toggleLang } = useGlobalTranslation()
 </script>

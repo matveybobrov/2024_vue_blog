@@ -53,25 +53,19 @@ module.exports = {
       'error',
       {
         'groups': [
-          // Vue and Vue-router related packages come first.
-          ['^vue|^vue-router', '^@?\\w'],
-          // Global functionality
-          ['^(@/router)(/.*|$)'],
-          ['^(@/translation)(/.*|$)'],
-          ['^(@/plugins)(/.*|$)'],
-          // Main components first
+          // Ui
           ['^(@/layouts)(/.*|$)'],
           ['^(@/pages)(/.*|$)'],
           ['^(@/widgets)(/.*|$)'],
-          // Idk if it's needed
-          ['^\\u0000'],
-          // Components
           ['^(@/components)(/.*|$)'],
-          // Ui components
-          ['^(@/components/ui)(/.*|$)'],
-          ['^(@/composables)(/.*|$)'],
-          // Assets
           ['^(@/assets)(/.*|$)'],
+          // Vue and Vue-router related packages come first.
+          ['^vue|^vue-router', '^@?\\w'],
+          // Real code
+          ['^(@/router)(/.*|$)'],
+          ['^(@/translation)(/.*|$)'],
+          ['^(@/plugins)(/.*|$)'],
+          ['^(@/composables)(/.*|$)'],
           ['^(@)(/.*|$)'],
           // Parent imports. Put `..` last.
           ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
