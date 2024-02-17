@@ -1,6 +1,6 @@
 import type { App } from 'vue'
 
-import router, { Routes } from '../router'
+import router, { Routes } from '@/router'
 
 export default {
   install(app: App) {

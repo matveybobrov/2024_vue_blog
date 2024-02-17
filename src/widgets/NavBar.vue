@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import LoginButton from '@/widgets/LoginButton';
+import LoginButton from '@/widgets/LoginButton.vue';
 </script>
 
 <template>

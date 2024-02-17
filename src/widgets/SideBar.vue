@@ -1,8 +1,8 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
 
-import LangSwitcher from '@/widgets/LangSwitcher';
-import ThemeSwitcher from '@/widgets/ThemeSwitcher';
+import LangSwitcher from '@/widgets/LangSwitcher.vue';
+import ThemeSwitcher from '@/widgets/ThemeSwitcher.vue';
 
 import AppLink from '@/shared/ui/AppLink';
 import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/shared/ui/BaseButton';
