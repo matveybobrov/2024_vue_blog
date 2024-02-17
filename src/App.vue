@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useLayout } from '@/app/config/layout';
-import AppClearLayout from '@/app/ui/AppClearLayout.vue';
-import AppMainLayout from '@/app/ui/AppMainLayout.vue';
+
+import AppClearLayout from '@/layouts/AppClearLayout.vue';
+import AppMainLayout from '@/layouts/AppMainLayout.vue';
 
 const { layout, Layouts } = useLayout()
 </script>
