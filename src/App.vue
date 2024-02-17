@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useLayout } from '@/app/config/layout';
-
+import useLayout from '@/composables/useLayout';
 import AppClearLayout from '@/layouts/AppClearLayout.vue';
 import AppMainLayout from '@/layouts/AppMainLayout.vue';
 
