@@ -1,7 +1,7 @@
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
-import { Layouts } from '@/app/providers/router/routes';
+import { Layouts } from '@/router/routes';
 
 export default function useLayout() {
   const route = useRoute()

@@ -1,7 +1,6 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
 
-import { Routes } from '@/app/providers/router';
 import LangSwitcher from '@/widgets/LangSwitcher';
 import ThemeSwitcher from '@/widgets/ThemeSwitcher';
 
@@ -10,6 +9,8 @@ import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/shared/ui/BaseBut
 
 import AboutIcon from '@/shared/assets/icons/about.svg'
 import HomeIcon from '@/shared/assets/icons/home.svg'
+
+import { Routes } from '@/router';
 
 const collapsed = ref(true)
 </script>
