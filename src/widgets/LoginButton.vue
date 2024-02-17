@@ -1,8 +1,8 @@
 <script setup lang='ts'>
 import { ref } from 'vue';
 
-import BaseButton, { BaseButtonTheme } from '@/shared/ui/BaseButton';
-import BaseModal from '@/shared/ui/BaseModal';
+import BaseButton, { BaseButtonTheme } from '@/components/ui/BaseButton';
+import BaseModal from '@/components/ui/BaseModal';
 
 const isAuth = ref(false)
 </script>

@@ -4,12 +4,11 @@ import { ref } from 'vue'
 import LangSwitcher from '@/widgets/LangSwitcher.vue';
 import ThemeSwitcher from '@/widgets/ThemeSwitcher.vue';
 
-import AppLink from '@/shared/ui/AppLink';
-import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/shared/ui/BaseButton';
-
 import AboutIcon from '@/shared/assets/icons/about.svg'
 import HomeIcon from '@/shared/assets/icons/home.svg'
 
+import AppLink from '@/components/ui/BaseAppLink';
+import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/components/ui/BaseButton';
 import { Routes } from '@/router';
 
 const collapsed = ref(true)
