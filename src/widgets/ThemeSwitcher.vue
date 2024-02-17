@@ -1,9 +1,10 @@
 <script setup lang='ts'>
-import DarkIcon from '@/shared/assets/icons/theme-dark.svg'
-import LightIcon from '@/shared/assets/icons/theme-light.svg'
-
 import BaseButton, { BaseButtonTheme } from '@/components/ui/BaseButton'
+
 import useGlobalTheme from '@/composables/useGlobalTheme';
+
+import DarkIcon from '@/assets/icons/theme-dark.svg'
+import LightIcon from '@/assets/icons/theme-light.svg'
 
 const { toggleTheme, theme, Theme } = useGlobalTheme()
 </script>
