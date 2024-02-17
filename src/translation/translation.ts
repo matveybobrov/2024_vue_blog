@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 
-import { translations } from '@/shared/config/translations'
+import translations from './translations'
 
 export enum Language {
   RU = 'russian',

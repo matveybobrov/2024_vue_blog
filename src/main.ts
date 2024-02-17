@@ -1,8 +1,7 @@
 import { createApp } from 'vue'
 
-import translation from '@/app/providers/translation'
-
 import errorHandler from '@/plugins/errorHandler'
+import translation from '@/plugins/translation'
 import router from '@/router'
 
 import App from './App.vue'

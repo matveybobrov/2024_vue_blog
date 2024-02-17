@@ -1,14 +1,6 @@
 import type { App } from 'vue'
 
-import {
-  Language, t, toggleLang
-} from './translation'
-
-export { Language }
-
-export function useGlobalTranslation() {
-  return { toggleLang }
-}
+import { t } from '@/translation/translation'
 
 export default {
   install(app: App) {

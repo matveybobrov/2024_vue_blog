@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import PageReloader from '@/widgets/PageReloader';
+import PageReloader from '@/widgets/PageReloader.vue';
 </script>
 
 <template>

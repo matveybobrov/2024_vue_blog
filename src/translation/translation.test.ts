@@ -1,6 +1,5 @@
-import { translations } from '@/shared/config/translations';
-
 import { Language, setLang, t } from './translation';
+import translations from './translations';
 
 beforeEach(() => {
   translations['тест'] = 'test'

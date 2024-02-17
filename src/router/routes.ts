@@ -25,19 +25,19 @@ export type Route = {
 export const routes: Route[] = [
   {
     path: Routes.MAIN,
-    component: () => import('@/pages/MainPage')
+    component: () => import('@/pages/MainPage.vue')
   },
   {
     path: Routes.ABOUT,
-    component: () => import('@/pages/AboutPage')
+    component: () => import('@/pages/AboutPage.vue')
   },
   {
     path: Routes.ERROR,
-    component: () => import('@/pages/ErrorPage'),
+    component: () => import('@/pages/ErrorPage.vue'),
     meta: { layout: Layouts.CLEAR }
   },
   {
     path: Routes.NOT_FOUND,
-    component: () => import('@/pages/NotFoundPage')
+    component: () => import('@/pages/NotFoundPage.vue')
   }
 ]
