@@ -50,6 +50,7 @@ defineProps<BaseModalProps>()
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(1px);
 }
 
 .content {
