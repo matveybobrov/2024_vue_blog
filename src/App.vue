@@ -17,8 +17,11 @@ const { layout, Layouts } = useLayout()
 </template>
 
 <style lang="scss">
+* {
+  font: var(--font-m)
+}
+
 .app {
-  font: var(--font-m);
   background-color: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;
