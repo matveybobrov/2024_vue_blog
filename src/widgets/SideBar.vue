@@ -52,7 +52,7 @@ const { collapsed } = useCollapseSidebar(true)
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
   background-color: var(--bg-color);
-  box-shadow: 1px 0 30px var(--shadow-color);
+  box-shadow: 1px 0 5px var(--shadow-color);
   position: relative;
   transition: width 0.2s;
 }
