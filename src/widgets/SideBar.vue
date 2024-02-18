@@ -3,16 +3,15 @@ import LangSwitcher from '@/widgets/LangSwitcher.vue';
 import ThemeSwitcher from '@/widgets/ThemeSwitcher.vue';
 
 import AppLink from '@/components/ui/BaseAppLink';
-import BaseButton, { BaseButtonSize, BaseButtonTheme } from '@/components/ui/BaseButton';
 
 import AboutIcon from '@/assets/icons/about.svg'
 import HomeIcon from '@/assets/icons/home.svg'
 
-import { ref } from 'vue'
-
 import { Routes } from '@/router';
 
-const collapsed = ref(true)
+import useCollapseSidebar from '@/composables/useCollapseSidebar';
+
+const { collapsed } = useCollapseSidebar(true)
 </script>
 
 <template>
@@ -44,14 +43,6 @@ const collapsed = ref(true)
       <ThemeSwitcher />
       <LangSwitcher />
     </div>
-    <BaseButton
-      :theme="BaseButtonTheme.BACKGROUND"
-      :size="BaseButtonSize.L"
-      class="collapse-btn"
-      @click="collapsed = !collapsed"
-    >
-      {{ collapsed ? '>' : '<' }}
-    </BaseButton>
   </div>
 </template>
 
@@ -61,7 +52,7 @@ const collapsed = ref(true)
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
   background-color: var(--bg-color);
-  border-right: 2px solid var(--middle-color);
+  box-shadow: 1px 0 30px var(--shadow-color);
   position: relative;
   transition: width 0.2s;
 }
@@ -77,13 +68,14 @@ const collapsed = ref(true)
     gap: 10px;
 
     &__icon {
-      fill: var(--bg-color-inverted);
+      fill: var(--primary-color);
       height: 20px;
       width: 20px
     }
 
     &__text {
       white-space: nowrap;
+      min-width: 50px;
     }
   }
 
@@ -107,9 +99,16 @@ const collapsed = ref(true)
     align-items: center;
   }
 
-  .links__item__text {
-    width: 0;
-    overflow: hidden;
+  .links {
+    &__item {
+      column-gap: 0;
+
+      &__text {
+        min-width: 0;
+        width: 0;
+        overflow: hidden;
+      }
+    }
   }
 }
 

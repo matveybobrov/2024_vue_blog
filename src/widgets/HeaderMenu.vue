@@ -1,9 +1,12 @@
 <script setup lang='ts'>
 import LoginButton from '@/widgets/LoginButton.vue';
+
+import SideBarCollapser from './SideBarCollapser.vue';
 </script>
 
 <template>
   <div class="NavBar">
+    <SideBarCollapser class="collapser" />
     <div class="links">
       <LoginButton />
     </div>
@@ -18,7 +21,7 @@ import LoginButton from '@/widgets/LoginButton.vue';
   display: flex;
   align-items: center;
   padding: 20px;
-  box-shadow: 0 3px 5px var(--shadow-color);
+  box-shadow: 0 1px 5px var(--shadow-color);
   position: relative;
   z-index: var(--header-z-index);
 }
@@ -27,5 +30,10 @@ import LoginButton from '@/widgets/LoginButton.vue';
   margin-left: auto;
   display: flex;
   gap: 20px;
+}
+
+.collapser {
+  position: absolute;
+  left: 0;
 }
 </style>
