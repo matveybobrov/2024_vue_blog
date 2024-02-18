@@ -61,7 +61,7 @@ const collapsed = ref(true)
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
   background-color: var(--bg-color);
-  border-right: 2px solid var(--secondary-color);
+  border-right: 2px solid var(--middle-color);
   position: relative;
   transition: width 0.2s;
 }
@@ -118,7 +118,7 @@ const collapsed = ref(true)
   top: 50%;
   transform: translate(100%, -50%);
   right: 0;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--middle-color);
   border-left: none;
   line-height: 0;
 }

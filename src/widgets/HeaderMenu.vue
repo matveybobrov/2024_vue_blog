@@ -15,10 +15,12 @@ import LoginButton from '@/widgets/LoginButton.vue';
   width: 100%;
   height: var(--navbar-height);
   background-color: var(--bg-color);
-  border-bottom: 2px solid var(--secondary-color);
   display: flex;
   align-items: center;
   padding: 20px;
+  box-shadow: 0 3px 5px var(--shadow-color);
+  position: relative;
+  z-index: var(--header-z-index);
 }
 
 .links {

@@ -1,10 +1,10 @@
 <script setup lang='ts'>
-import NavBar from '@/widgets/NavBar.vue';
+import HeaderMenu from '@/widgets/HeaderMenu.vue';
 import SideBar from '@/widgets/SideBar.vue';
 </script>
 
 <template>
-  <NavBar />
+  <HeaderMenu />
   <div class="content-page">
     <SideBar />
     <RouterView class="main-page" />
