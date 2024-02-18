@@ -16,7 +16,7 @@ const { toggleTheme, theme, Theme } = useGlobalTheme()
     @click="toggleTheme"
   >
     <LightIcon
-      v-if="theme === Theme.DARK"
+      v-if="theme === Theme.LIGHT"
       class="icon"
     />
     <DarkIcon
