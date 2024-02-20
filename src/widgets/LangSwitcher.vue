@@ -20,8 +20,7 @@ const { toggleLang } = useGlobalTranslation()
 
 <style scoped lang='scss'>
 .LangSwitcher {
-  width: 20px;
-  height: 20px;
+  width: var(--icon-size);
 }
 
 .icon {

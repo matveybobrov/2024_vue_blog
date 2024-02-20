@@ -23,7 +23,10 @@ const { toggleCollapsed } = useCollapseSidebar()
 
 <style scoped lang='scss'>
 .SideBarCollapser {
-  width: var(--sidebar-width-collapsed);
+  position: absolute;
+  left: 0;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 .collapser {

@@ -28,8 +28,8 @@ const { toggleTheme, theme, Theme } = useGlobalTheme()
 
 <style scoped lang='scss'>
 .ThemeSwitcher {
-  height: 20px;
-  width: 20px;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 .icon {

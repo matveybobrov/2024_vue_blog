@@ -33,7 +33,6 @@ import SideBarCollapser from './SideBarCollapser.vue';
 }
 
 .collapser {
-  position: absolute;
-  left: 0;
+  margin-left: var(--sidebar-left-padding);
 }
 </style>

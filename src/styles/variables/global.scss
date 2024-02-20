@@ -14,6 +14,10 @@
   --navbar-height: 50px;
   --sidebar-width: 200px;
   --sidebar-width-collapsed: 80px;
+  --icon-size: 20px;
+
+  // Paddings
+  --sidebar-left-padding: calc(calc(var(--sidebar-width-collapsed) - var(--icon-size)) / 2);
 
   // Z-indexes
   --modal-z-index: 10;

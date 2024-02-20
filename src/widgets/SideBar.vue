@@ -60,8 +60,8 @@ const { collapsed } = useCollapseSidebar(true)
 .links {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
+  padding-left: var(--sidebar-left-padding);
 
   &__item {
     display: flex;
@@ -69,13 +69,12 @@ const { collapsed } = useCollapseSidebar(true)
 
     &__icon {
       fill: var(--primary-color);
-      height: 20px;
-      width: 20px
+      height: var(--icon-size);
+      width: var(--icon-size);
     }
 
     &__text {
       white-space: nowrap;
-      min-width: 50px;
     }
   }
 
@@ -101,10 +100,9 @@ const { collapsed } = useCollapseSidebar(true)
 
   .links {
     &__item {
-      column-gap: 0;
+      gap: 0;
 
       &__text {
-        min-width: 0;
         width: 0;
         overflow: hidden;
       }
