@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "npx mock-config-server --port 3000 --watch --config ./server/mock-server.config.js",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -50,7 +49,6 @@
     "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-vitest-globals": "^1.4.0",
     "eslint-plugin-vue": "^9.17.0",
-    "json-server": "^1.0.0-alpha.23",
     "npm-run-all2": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
