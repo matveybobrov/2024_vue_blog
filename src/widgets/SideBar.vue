@@ -58,22 +58,26 @@ const { collapsed } = useCollapseSidebar(true)
 }
 
 .links {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: var(--sidebar-left-padding);
 
   &__item {
+    padding-left: var(--sidebar-left-padding);
     display: flex;
-    gap: 10px;
 
     &__icon {
+      margin-right: 10px;
       fill: var(--primary-color);
       height: var(--icon-size);
       width: var(--icon-size);
     }
 
     &__text {
+      transition: all 0.2s;
+      transform: scaleX(100%);
+      overflow: hidden;
       white-space: nowrap;
     }
   }
@@ -100,11 +104,9 @@ const { collapsed } = useCollapseSidebar(true)
 
   .links {
     &__item {
-      gap: 0;
-
       &__text {
+        transform: scaleX(0%);
         width: 0;
-        overflow: hidden;
       }
     }
   }
